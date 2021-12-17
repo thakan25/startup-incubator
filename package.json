@@ -18,6 +18,8 @@
   },
   "homepage": " https://github.com/adityabisoi/startup-incubator/#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongodb": "^4.2.2",
+    "mongoose": "^6.1.2"
   }
 }
