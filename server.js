@@ -1,11 +1,15 @@
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 5000;
-const {MongoClient} = require("mongodb");
+const service = require("./controllers/intro");
 
-const uri = `mongodb+srv://sachinthakan001:helloMongoDB@cluster0.ovwhl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
 
-const client = new MongoClient(uri);
+
+app.post('/api/signup', function(req, res){
+    service.create(req, res);
+});
 
 app.listen(port, () => console.log(`Listening on port ${port}`)); //
 

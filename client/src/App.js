@@ -3,7 +3,9 @@ import "./App.css";
 import Headers from "./HomePage/Header";
 import Body from "./HomePage/Body";
 import Footer from "./HomePage/Footer";
-import Product from './Components/Product/Product'
+import Product from './Components/Product/Product';
+import SignUp from './Login/SignUp';
+import Login from './Login/Login'
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
         <Headers />
         <Routes>
           <Route path="/" exact element={<Body />}></Route>
+          <Route path="/signup" element={<SignUp />}></Route>
+          <Route path="/login" element={<Login />}></Route>
           <Route path="product_details">
             <Route path=":product_id"  element={<Product />}></Route>
           </Route>
